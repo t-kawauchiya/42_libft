@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: TakeshiKawauchiya <TakeshiKawauchiya@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 14:19:42 by takwauc           #+#    #+#             */
-/*   Updated: 2024/11/27 21:31:54 by TakeshiKawa      ###   ########.fr       */
+/*   Created: 2024/11/27 21:39:52 by TakeshiKawa       #+#    #+#             */
+/*   Updated: 2024/11/27 21:41:03 by TakeshiKawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int	ft_isprint(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	return (' ' <= c && c <= '~');
 }

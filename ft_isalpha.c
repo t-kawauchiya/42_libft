@@ -3,26 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takwauc <takawauc@student.42tokyo.jp>      +#+  +:+       +#+        */
+/*   By: TakeshiKawauchiya <TakeshiKawauchiya@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:04:51 by takwauc           #+#    #+#             */
-/*   Updated: 2024/11/22 02:01:48 by takwauc          ###   ########.fr       */
+/*   Updated: 2024/11/27 21:30:12 by TakeshiKawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(char c)
 {
-	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
+	return (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'));
 }
-
-// #include <stdio.h>
-// int main(void) {
-//   if (ft_isalpha('a')) {
-//     printf("a is alphabet");
-//   }
-//   if (ft_isalpha('?')) {
-//     printf("? is alphabet");
-//   } else {
-//     printf("? is not alphabet");
-//   }
-// }

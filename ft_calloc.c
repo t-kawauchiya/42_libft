@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: TakeshiKawauchiya <TakeshiKawauchiya@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/28 01:08:20 by TakeshiKawa       #+#    #+#             */
-/*   Updated: 2024/11/28 02:12:21 by TakeshiKawa      ###   ########.fr       */
+/*   Created: 2024/11/28 02:14:37 by TakeshiKawa       #+#    #+#             */
+/*   Updated: 2024/11/28 02:25:58 by TakeshiKawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	i;
-	size_t	j;
+	void	*result;
 
-	if (!needle[0])
-		return ((char *)haystack);
-	i = 0;
-	while (haystack[i] && i < len)
-	{
-		j = 0;
-		while (haystack[i + j] && needle[j] && i + j < len)
-		{
-			if (haystack[i + j] != needle[j])
-				break ;
-			j++;
-		}
-		if (needle[j])
-			return ((char *)(haystack + i));
-		i++;
-	}
-	return (NULL);
+	if (count > 0 && size > SIZE_MAX / count)
+		return (NULL);
+	result = (void *)malloc(count * size);
+	if (!result)
+		return (NULL);
+	ft_memset(result, 0, count * size);
+	return (result);
 }

@@ -6,7 +6,7 @@
 /*   By: TakeshiKawauchiya <TakeshiKawauchiya@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 01:08:20 by TakeshiKawa       #+#    #+#             */
-/*   Updated: 2024/11/28 02:12:21 by TakeshiKawa      ###   ########.fr       */
+/*   Updated: 2024/11/30 18:16:48 by TakeshiKawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 				break ;
 			j++;
 		}
-		if (needle[j])
+		if (!needle[j])
 			return ((char *)(haystack + i));
 		i++;
 	}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takwauc <takawauc@student.42tokyo.jp>      +#+  +:+       +#+        */
+/*   By: TakeshiKawauchiya <TakeshiKawauchiya@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 23:32:01 by takwauc           #+#    #+#             */
-/*   Updated: 2024/11/25 23:58:06 by takwauc          ###   ########.fr       */
+/*   Updated: 2024/11/30 01:42:27 by TakeshiKawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,4 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n / 10, fd);
 	c = n % 10 + '0';
 	write(fd, &c, 1);
-}
-
-int	main(void)
-{
-	ft_putnbr_fd(12345, 1);
 }

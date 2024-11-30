@@ -6,7 +6,7 @@
 /*   By: TakeshiKawauchiya <TakeshiKawauchiya@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 21:50:13 by TakeshiKawa       #+#    #+#             */
-/*   Updated: 2024/11/27 22:01:48 by TakeshiKawa      ###   ########.fr       */
+/*   Updated: 2024/11/30 16:18:09 by TakeshiKawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int		i;
-	char	*cdst;
-	char	*csrc;
+	size_t			i;
+	unsigned char	*cdst;
+	unsigned char	*csrc;
 
-	cdst = (char *)dst;
-	csrc = (char *)src;
+	cdst = (unsigned char *)dst;
+	csrc = (unsigned char *)src;
 	if (dst < src)
 	{
 		i = 0;
@@ -31,10 +31,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		i = len - 1;
-		while (i >= 0)
+		i = len;
+		while (i > 0)
 		{
-			cdst[i] = csrc[i];
+			cdst[i - 1] = csrc[i - 1];
 			i--;
 		}
 	}

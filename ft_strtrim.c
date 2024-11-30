@@ -6,14 +6,14 @@
 /*   By: TakeshiKawauchiya <TakeshiKawauchiya@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 22:55:06 by TakeshiKawa       #+#    #+#             */
-/*   Updated: 2024/11/29 00:10:33 by TakeshiKawa      ###   ########.fr       */
+/*   Updated: 2024/11/30 01:36:00 by TakeshiKawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		isincludedinset(char c, char *set);
-static size_t	calclength(char *s1, char *set);
+static int		isincludedinset(const char c, const char *set);
+static size_t	calclength(const char *s1, const char *set);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -39,7 +39,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (ret);
 }
 
-static size_t	calclength(char *s1, char *set)
+static size_t	calclength(const char *s1, const char *set)
 {
 	size_t	i;
 	size_t	len;
@@ -55,7 +55,7 @@ static size_t	calclength(char *s1, char *set)
 	return (len);
 }
 
-static int	isincluded(char c, char *set)
+static int	isincludedinset(const char c, const char *set)
 {
 	while (*set)
 	{

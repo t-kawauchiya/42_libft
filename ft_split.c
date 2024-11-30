@@ -6,34 +6,31 @@
 /*   By: TakeshiKawauchiya <TakeshiKawauchiya@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 00:19:26 by TakeshiKawa       #+#    #+#             */
-/*   Updated: 2024/11/29 02:27:45 by TakeshiKawa      ###   ########.fr       */
+/*   Updated: 2024/11/30 01:31:17 by TakeshiKawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_word_count(char *s, char c);
-static char		**ft_alloc_array(char **ret, char const *s, char c,
-					size_t word_count);
+static size_t	ft_word_count(const char *s, char c);
+static char		**ft_alloc_array(char const *s, char c, size_t word_count);
 static void		*ft_free_allay(char **ret, size_t i);
 
 char	**ft_split(char const *s, char c)
 {
 	char	**ret;
-	size_t	word_len;
-	size_t	i;
 
 	if (!s)
 		return (NULL);
-	ret = ft_alloc_array(ret, s, c, ft_word_count(s, c));
+	ret = ft_alloc_array(s, c, ft_word_count(s, c));
 	return (ret);
 }
 
-static char	**ft_alloc_array(char **ret, char const *s, char c,
-		size_t word_count)
+static char	**ft_alloc_array(char const *s, char c, size_t word_count)
 {
 	size_t	word_len;
 	size_t	i;
+	char	**ret;
 
 	ret = (char **)malloc((word_count + 1) * sizeof(char *));
 	if (!ret)
@@ -56,7 +53,7 @@ static char	**ft_alloc_array(char **ret, char const *s, char c,
 	return (ret);
 }
 
-static size_t	ft_word_count(char *s, char c)
+static size_t	ft_word_count(const char *s, char c)
 {
 	size_t	count;
 
@@ -81,4 +78,5 @@ static void	*ft_free_allay(char **ret, size_t i)
 		free(ret[i]);
 	}
 	free(ret);
+	return (NULL);
 }

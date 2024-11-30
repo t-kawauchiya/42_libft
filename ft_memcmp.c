@@ -6,7 +6,7 @@
 /*   By: TakeshiKawauchiya <TakeshiKawauchiya@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 00:54:39 by TakeshiKawa       #+#    #+#             */
-/*   Updated: 2024/11/28 01:08:01 by TakeshiKawa      ###   ########.fr       */
+/*   Updated: 2024/11/30 16:25:22 by TakeshiKawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*cs1;
 	unsigned char	*cs2;
 
+	if (n == 0)
+		return (0);
 	i = 0;
 	cs1 = (unsigned char *)s1;
 	cs2 = (unsigned char *)s2;

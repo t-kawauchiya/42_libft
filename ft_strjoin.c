@@ -6,7 +6,7 @@
 /*   By: TakeshiKawauchiya <TakeshiKawauchiya@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 22:33:14 by TakeshiKawa       #+#    #+#             */
-/*   Updated: 2024/11/28 22:54:19 by TakeshiKawa      ###   ########.fr       */
+/*   Updated: 2024/11/30 18:30:44 by TakeshiKawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	while (s2[j])
 	{
-		ret[i + j - 1] = s2[j];
+		ret[i + j] = s2[j];
 		j++;
 	}
-	ret[i + j - 1] = '\0';
+	ret[i + j] = '\0';
 	return (ret);
 }

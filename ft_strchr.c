@@ -6,7 +6,7 @@
 /*   By: TakeshiKawauchiya <TakeshiKawauchiya@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 23:04:40 by TakeshiKawa       #+#    #+#             */
-/*   Updated: 2024/11/27 23:44:02 by TakeshiKawa      ###   ########.fr       */
+/*   Updated: 2024/12/01 10:23:19 by TakeshiKawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-	if (c == '\0')
+	if (!(char)c)
 		return ((char *)s);
 	return (NULL);
 }

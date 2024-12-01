@@ -6,7 +6,7 @@
 /*   By: TakeshiKawauchiya <TakeshiKawauchiya@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 21:50:13 by TakeshiKawa       #+#    #+#             */
-/*   Updated: 2024/11/30 19:24:39 by TakeshiKawa      ###   ########.fr       */
+/*   Updated: 2024/11/30 21:49:36 by TakeshiKawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 	unsigned char	*cdst;
 	unsigned char	*csrc;
 
-	if (!dst | !src)
+	if (!len)
 		return (dst);
+	if (!dst && !src)
+		return (NULL);
 	cdst = (unsigned char *)dst;
 	csrc = (unsigned char *)src;
 	i = 0;

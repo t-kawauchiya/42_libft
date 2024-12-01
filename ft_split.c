@@ -6,7 +6,7 @@
 /*   By: TakeshiKawauchiya <TakeshiKawauchiya@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 00:19:26 by TakeshiKawa       #+#    #+#             */
-/*   Updated: 2024/11/30 01:31:17 by TakeshiKawa      ###   ########.fr       */
+/*   Updated: 2024/11/30 23:42:09 by TakeshiKawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ static char	**ft_alloc_array(char const *s, char c, size_t word_count)
 		word_len = 0;
 		while (s[word_len] && s[word_len] != c)
 			word_len++;
+		if (!word_len)
+			break ;
 		ret[i] = ft_substr(s, 0, word_len);
 		if (!ret[i])
 			return (ft_free_allay(ret, i));

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takwauc <takawauc@student.42tokyo.jp>      +#+  +:+       +#+        */
+/*   By: TakeshiKawauchiya <TakeshiKawauchiya@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 22:27:45 by takwauc           #+#    #+#             */
-/*   Updated: 2024/11/25 22:28:47 by takwauc          ###   ########.fr       */
+/*   Updated: 2024/12/05 23:48:35 by TakeshiKawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])

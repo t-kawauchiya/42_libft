@@ -6,7 +6,7 @@
 /*   By: TakeshiKawauchiya <TakeshiKawauchiya@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 22:29:49 by takwauc           #+#    #+#             */
-/*   Updated: 2024/11/29 02:28:14 by TakeshiKawa      ###   ########.fr       */
+/*   Updated: 2024/12/05 23:47:31 by TakeshiKawa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <limits.h>
 # include <stddef.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
